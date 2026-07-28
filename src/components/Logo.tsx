@@ -15,7 +15,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 'md', lightTe
       <div className={`flex items-center gap-2 ${scale}`}>
         {!imgError ? (
           <img
-            src="public/PixelsLogo.png"
+            src="/PixelsLogo.png"
             alt="Pixels Advertisement Logo"
             width="4799"
             height="1309"
