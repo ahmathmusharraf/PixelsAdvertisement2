@@ -61,28 +61,28 @@ export const WhyChooseUs: React.FC = () => {
           </p>
         </div>
 
-        {/* 6 Glassmorphism Animated Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 6 Glassmorphism Animated Cards Grid - 2 Columns on Mobile */}
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-6">
           {reasons.map((item, idx) => {
             const IconComp = item.icon;
             return (
               <div
                 key={idx}
-                className="group relative p-6 rounded-2xl bg-neutral-900/60 hover:bg-neutral-900/90 border border-neutral-800 hover:border-orange-500/50 backdrop-blur-xl shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+                className="group relative p-3 sm:p-6 rounded-xl sm:rounded-2xl bg-neutral-900/60 hover:bg-neutral-900/90 border border-neutral-800 hover:border-orange-500/50 backdrop-blur-xl shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
               >
                 {/* Accent Background Gradient */}
-                <div className={`absolute -right-10 -bottom-10 w-40 h-40 bg-gradient-to-br ${item.accent} rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500 pointer-events-none`} />
+                <div className={`absolute -right-10 -bottom-10 w-28 sm:w-40 h-28 sm:h-40 bg-gradient-to-br ${item.accent} rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500 pointer-events-none`} />
 
-                <div className="relative z-10 space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-orange-500/10 group-hover:bg-orange-500/20 border border-orange-500/30 text-orange-400 flex items-center justify-center transition-transform group-hover:scale-110">
-                    <IconComp className="w-6 h-6" />
+                <div className="relative z-10 space-y-2 sm:space-y-4">
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-orange-500/10 group-hover:bg-orange-500/20 border border-orange-500/30 text-orange-400 flex items-center justify-center transition-transform group-hover:scale-110">
+                    <IconComp className="w-4 h-4 sm:w-6 sm:h-6" />
                   </div>
 
-                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition">
+                  <h3 className="text-xs sm:text-lg font-bold text-white group-hover:text-orange-400 transition leading-snug">
                     {item.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                  <p className="text-[11px] sm:text-sm text-neutral-400 leading-tight sm:leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
