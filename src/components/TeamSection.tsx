@@ -30,14 +30,14 @@ export const TeamSection: React.FC = () => {
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-6 sm:mb-12">
           {departments.map((dept) => {
             const isActive = activeDept === dept;
             return (
               <button
                 key={dept}
                 onClick={() => setActiveDept(dept)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition cursor-pointer ${
+                className={`px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl text-[10px] sm:text-sm font-semibold transition cursor-pointer ${
                   isActive
                     ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/25 font-bold'
                     : 'bg-neutral-900 text-neutral-300 hover:text-white border border-neutral-800'
@@ -49,17 +49,17 @@ export const TeamSection: React.FC = () => {
           })}
         </div>
 
-        {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Team Grid - 2 Columns on Mobile */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6">
           {filteredTeam.map((member) => (
             <div
               key={member.id}
-              className="group relative p-1 rounded-2xl bg-gradient-to-b from-neutral-800 via-neutral-900 to-orange-500/20 hover:to-orange-500/50 transition duration-500 shadow-xl"
+              className="group relative p-0.5 sm:p-1 rounded-xl sm:rounded-2xl bg-gradient-to-b from-neutral-800 via-neutral-900 to-orange-500/20 hover:to-orange-500/50 transition duration-500 shadow-xl"
             >
-              <div className="bg-[#121212] rounded-xl overflow-hidden p-4 space-y-4 h-full flex flex-col justify-between">
+              <div className="bg-[#121212] rounded-lg sm:rounded-xl overflow-hidden p-2 sm:p-4 space-y-2 sm:space-y-4 h-full flex flex-col justify-between">
                 <div>
                   {/* Photo with Frame */}
-                  <div className="relative aspect-[4/4] rounded-xl overflow-hidden bg-neutral-950 mb-3 border border-neutral-800">
+                  <div className="relative aspect-square rounded-md sm:rounded-xl overflow-hidden bg-neutral-950 mb-2 sm:mb-3 border border-neutral-800">
                     <img
                       src={member.photo}
                       alt={member.name}
@@ -69,38 +69,38 @@ export const TeamSection: React.FC = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />
 
                     {/* Department Badge */}
-                    <div className="absolute top-2 left-2 px-2.5 py-0.5 rounded-md bg-black/80 backdrop-blur-md border border-neutral-700 text-[10px] font-bold text-orange-400">
+                    <div className="absolute top-1 left-1 sm:top-2 sm:left-2 px-1.5 sm:px-2.5 py-0.5 rounded sm:rounded-md bg-black/80 backdrop-blur-md border border-neutral-700 text-[8px] sm:text-[10px] font-bold text-orange-400">
                       {member.department}
                     </div>
                   </div>
 
                   {/* Name & Role */}
-                  <div className="space-y-1 text-center sm:text-left">
-                    <h3 className="text-base font-bold text-white group-hover:text-orange-400 transition">
+                  <div className="space-y-0.5 sm:space-y-1 text-left">
+                    <h3 className="text-xs sm:text-base font-bold text-white group-hover:text-orange-400 transition leading-snug line-clamp-1">
                       {member.name}
                     </h3>
-                    <p className="text-xs font-semibold text-orange-500">
+                    <p className="text-[10px] sm:text-xs font-semibold text-orange-500 leading-tight">
                       {member.role}
                     </p>
-                    <p className="text-xs text-neutral-400 leading-relaxed pt-1.5 line-clamp-3">
+                    <p className="text-[10px] sm:text-xs text-neutral-400 leading-tight sm:leading-relaxed pt-1 line-clamp-2 sm:line-clamp-3">
                       {member.bio}
                     </p>
                   </div>
                 </div>
 
                 {/* Footer Social Link */}
-                <div className="pt-3 border-t border-neutral-800/80 flex items-center justify-between">
-                  <span className="text-[10px] text-neutral-400 font-mono">
-                    Pixels UAE Team
+                <div className="pt-2 sm:pt-3 border-t border-neutral-800/80 flex items-center justify-between">
+                  <span className="text-[8px] sm:text-[10px] text-neutral-400 font-mono truncate">
+                    Pixels UAE
                   </span>
                   {member.linkedin && (
                     <a
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-1.5 rounded-lg bg-neutral-800 hover:bg-orange-500 text-neutral-300 hover:text-white transition"
+                      className="p-1 sm:p-1.5 rounded bg-neutral-800 hover:bg-orange-500 text-neutral-300 hover:text-white transition shrink-0"
                     >
-                      <Linkedin className="w-3.5 h-3.5" />
+                      <Linkedin className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                     </a>
                   )}
                 </div>
