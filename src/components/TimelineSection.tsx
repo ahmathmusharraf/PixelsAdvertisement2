@@ -27,62 +27,45 @@ export const TimelineSection: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Timeline Desktop / Mobile Container */}
-        <div className="relative max-w-4xl mx-auto">
-          {/* Vertical Connecting Line */}
-          <motion.div 
-            initial={{ scaleY: 0 }}
-            whileInView={{ scaleY: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, ease: 'easeOut' }}
-            className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-orange-500 via-orange-500/50 to-amber-400 -translate-x-1/2 origin-top"
-          />
-
-          <div className="space-y-12">
-            {timelineData.map((item, idx) => {
-              const isEven = idx % 2 === 0;
-              return (
-                <motion.div
-                  key={item.year}
-                  initial={{ opacity: 0, x: isEven ? 30 : -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: '-50px' }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className={`relative flex flex-col sm:flex-row items-center ${
-                    isEven ? 'sm:flex-row-reverse' : ''
-                  }`}
-                >
-                  {/* Content Box */}
-                  <div className="w-full sm:w-1/2 pl-12 sm:pl-0 sm:px-8">
-                    <motion.div 
-                      whileHover={{ y: -4 }}
-                      className="bg-neutral-900/80 border border-neutral-800 hover:border-orange-500/50 p-6 rounded-2xl shadow-xl transition-all duration-300 group"
-                    >
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="px-3 py-1 rounded-lg bg-orange-500 text-white font-extrabold text-sm shadow">
-                          {item.year}
-                        </span>
-                        <Flame className="w-4 h-4 text-orange-400 opacity-0 group-hover:opacity-100 transition" />
-                      </div>
-
-                      <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition">
-                        {item.title}
-                      </h3>
-
-                      <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed mt-2">
-                        {item.description}
-                      </p>
-                    </motion.div>
+        {/* Timeline Cards Grid - 2 Columns on Mobile */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6">
+          {timelineData.map((item, idx) => (
+            <motion.div
+              key={item.year}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: idx * 0.08 }}
+              whileHover={{ y: -4 }}
+              className="bg-neutral-900/80 border border-neutral-800 hover:border-orange-500/50 p-2.5 sm:p-5 rounded-xl sm:rounded-2xl shadow-xl transition-all duration-300 group flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+                  <span className="px-2 sm:px-3 py-0.5 sm:py-1 rounded-md sm:rounded-lg bg-orange-500 text-white font-extrabold text-[10px] sm:text-xs shadow">
+                    {item.year}
+                  </span>
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 flex items-center justify-center">
+                    <CheckCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                   </div>
+                </div>
 
-                  {/* Center Node Pin */}
-                  <div className="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-[#0E0E0E] border-2 border-orange-500 text-orange-400 flex items-center justify-center shadow-lg shadow-orange-500/30 z-10">
-                    <CheckCircle className="w-4 h-4" />
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
+                <h3 className="text-xs sm:text-base font-bold text-white group-hover:text-orange-400 transition leading-snug line-clamp-1">
+                  {item.title}
+                </h3>
+
+                <p className="text-[11px] sm:text-xs text-neutral-400 leading-tight sm:leading-relaxed mt-1 sm:mt-2 line-clamp-3">
+                  {item.description}
+                </p>
+              </div>
+
+              <div className="mt-2 pt-2 border-t border-neutral-800/80 flex items-center justify-between">
+                <span className="text-[9px] sm:text-[10px] text-neutral-500 font-mono">
+                  Milestone #{idx + 1}
+                </span>
+                <Flame className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-orange-400 opacity-0 group-hover:opacity-100 transition" />
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
