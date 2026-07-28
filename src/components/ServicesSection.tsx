@@ -27,14 +27,14 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenQuoteMod
 
   const getIcon = (iconName: string) => {
     switch (iconName) {
-      case 'ShieldAlert': return <ShieldAlert className="w-6 h-6 text-orange-400" />;
-      case 'Printer': return <Printer className="w-6 h-6 text-orange-400" />;
-      case 'Truck': return <Truck className="w-6 h-6 text-orange-400" />;
-      case 'Tv': return <Tv className="w-6 h-6 text-orange-400" />;
-      case 'Layers': return <Layers className="w-6 h-6 text-orange-400" />;
-      case 'Globe': return <Globe className="w-6 h-6 text-orange-400" />;
-      case 'Gift': return <Gift className="w-6 h-6 text-orange-400" />;
-      default: return <Maximize2 className="w-6 h-6 text-orange-400" />;
+      case 'ShieldAlert': return <ShieldAlert className="w-4 h-4 sm:w-6 sm:h-6 text-orange-400" />;
+      case 'Printer': return <Printer className="w-4 h-4 sm:w-6 sm:h-6 text-orange-400" />;
+      case 'Truck': return <Truck className="w-4 h-4 sm:w-6 sm:h-6 text-orange-400" />;
+      case 'Tv': return <Tv className="w-4 h-4 sm:w-6 sm:h-6 text-orange-400" />;
+      case 'Layers': return <Layers className="w-4 h-4 sm:w-6 sm:h-6 text-orange-400" />;
+      case 'Globe': return <Globe className="w-4 h-4 sm:w-6 sm:h-6 text-orange-400" />;
+      case 'Gift': return <Gift className="w-4 h-4 sm:w-6 sm:h-6 text-orange-400" />;
+      default: return <Maximize2 className="w-4 h-4 sm:w-6 sm:h-6 text-orange-400" />;
     }
   };
 
@@ -60,8 +60,8 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenQuoteMod
           </p>
         </motion.div>
 
-        {/* Services Grid - 2 Column Desktop layout matching prompt */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6">
+        {/* Services Grid - 2 Columns on Mobile, 4 Columns on Large Screens */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6">
           {servicesData.map((service, idx) => (
             <motion.div
               key={service.id}
@@ -71,7 +71,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenQuoteMod
               transition={{ duration: 0.5, delay: idx * 0.08 }}
               whileHover={{ y: -6 }}
               onClick={() => setSelectedService(service)}
-              className="group bg-neutral-900/80 hover:bg-neutral-900 border border-neutral-800 hover:border-orange-500/50 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer"
+              className="group bg-neutral-900/80 hover:bg-neutral-900 border border-neutral-800 hover:border-orange-500/50 rounded-xl sm:rounded-2xl overflow-hidden shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer"
             >
               <div>
                 {/* Image & Icon Header */}
@@ -85,42 +85,42 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenQuoteMod
                   <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/40 to-transparent" />
 
                   {/* Icon Badge */}
-                  <div className="absolute top-2.5 left-2.5 p-2 rounded-xl bg-black/80 backdrop-blur-md border border-neutral-700 shadow-lg">
+                  <div className="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-black/80 backdrop-blur-md border border-neutral-700 shadow-lg">
                     {getIcon(service.iconName)}
                   </div>
 
                   {/* Price Tag if available */}
                   {service.startingPrice && (
-                    <div className="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded-lg bg-orange-500/90 text-white font-bold text-[11px] sm:text-xs shadow">
+                    <div className="absolute bottom-1.5 right-1.5 sm:bottom-2.5 sm:right-2.5 px-1.5 py-0.5 sm:px-2 rounded-md sm:rounded-lg bg-orange-500/90 text-white font-bold text-[9px] sm:text-xs shadow">
                       From {service.startingPrice}
                     </div>
                   )}
                 </div>
 
                 {/* Content */}
-                <div className="p-3.5 sm:p-5 space-y-2 sm:space-y-3">
-                  <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-orange-400 transition flex items-center justify-between">
-                    <span>{service.title}</span>
-                    <ArrowRight className="w-4 h-4 text-orange-500 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                <div className="p-2.5 sm:p-5 space-y-1.5 sm:space-y-3">
+                  <h3 className="text-xs sm:text-lg font-bold text-white group-hover:text-orange-400 transition flex items-center justify-between gap-1 leading-snug">
+                    <span className="line-clamp-2">{service.title}</span>
+                    <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-orange-500 shrink-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all hidden sm:block" />
                   </h3>
 
-                  <p className="text-xs text-neutral-400 leading-relaxed line-clamp-2">
+                  <p className="text-[11px] sm:text-xs text-neutral-400 leading-tight sm:leading-relaxed line-clamp-2">
                     {service.shortDesc}
                   </p>
 
                   {/* Item List Tags */}
-                  <div className="flex flex-wrap gap-1.5 pt-2">
-                    {service.items.slice(0, 4).map((item, idx) => (
+                  <div className="flex flex-wrap gap-1 sm:gap-1.5 pt-1 sm:pt-2">
+                    {service.items.slice(0, 2).map((item, idx) => (
                       <span
                         key={idx}
-                        className="px-2 py-0.5 rounded-md bg-neutral-800 border border-neutral-700/60 text-[11px] font-medium text-neutral-300"
+                        className="px-1.5 py-0.5 rounded sm:rounded-md bg-neutral-800 border border-neutral-700/60 text-[9px] sm:text-[11px] font-medium text-neutral-300 truncate max-w-[110px]"
                       >
                         {item}
                       </span>
                     ))}
-                    {service.items.length > 4 && (
-                      <span className="px-1.5 py-0.5 rounded-md bg-orange-500/10 text-orange-400 font-bold text-[10px]">
-                        +{service.items.length - 4} more
+                    {service.items.length > 2 && (
+                      <span className="px-1 py-0.5 rounded sm:rounded-md bg-orange-500/10 text-orange-400 font-bold text-[9px] sm:text-[10px]">
+                        +{service.items.length - 2}
                       </span>
                     )}
                   </div>
@@ -128,16 +128,16 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenQuoteMod
               </div>
 
               {/* Footer CTA */}
-              <div className="px-5 pb-5 pt-2">
+              <div className="px-2.5 sm:px-5 pb-2.5 sm:pb-5 pt-1 sm:pt-2">
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
                     onOpenQuoteModal(service.title);
                   }}
-                  className="w-full py-2.5 rounded-xl bg-neutral-800 hover:bg-orange-500 text-neutral-200 hover:text-white font-semibold text-xs transition duration-200 flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="w-full py-1.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-neutral-800 hover:bg-orange-500 text-neutral-200 hover:text-white font-semibold text-[10px] sm:text-xs transition duration-200 flex items-center justify-center gap-1 cursor-pointer"
                 >
-                  <span>Request Quote</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <span>Quote</span>
+                  <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                 </button>
               </div>
             </motion.div>
