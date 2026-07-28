@@ -65,8 +65,8 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onOpenQuoteM
           })}
         </div>
 
-        {/* Portfolio Gallery Grid */}
-        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3.5 sm:gap-6">
+        {/* Portfolio Gallery Grid - 2 Columns on Mobile */}
+        <motion.div layout className="grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-2.5 sm:gap-6">
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project) => (
               <motion.div
@@ -77,7 +77,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onOpenQuoteM
                 transition={{ duration: 0.4 }}
                 key={project.id}
                 onClick={() => setSelectedProject(project)}
-                className="group bg-neutral-900 border border-neutral-800 hover:border-orange-500/40 rounded-2xl overflow-hidden shadow-xl transition duration-300 cursor-pointer flex flex-col justify-between"
+                className="group bg-neutral-900 border border-neutral-800 hover:border-orange-500/40 rounded-xl sm:rounded-2xl overflow-hidden shadow-xl transition duration-300 cursor-pointer flex flex-col justify-between"
               >
                 <div>
                   {/* Image Showcase */}
@@ -91,49 +91,48 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onOpenQuoteM
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition" />
 
                     {/* Top Category Badge */}
-                    <div className="absolute top-3 left-3 px-3 py-1 rounded-lg bg-black/80 backdrop-blur-md border border-neutral-700 text-xs font-bold text-orange-400">
+                    <div className="absolute top-1.5 left-1.5 sm:top-3 sm:left-3 px-1.5 sm:px-3 py-0.5 sm:py-1 rounded-md sm:rounded-lg bg-black/80 backdrop-blur-md border border-neutral-700 text-[9px] sm:text-xs font-bold text-orange-400">
                       {project.category}
                     </div>
 
                     {/* Before/After Tag if available */}
                     {project.beforeImage && (
-                      <div className="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-orange-500 text-white font-bold text-[10px] flex items-center gap-1 shadow-lg">
-                        <Sparkles className="w-3 h-3" />
-                        <span>Before / After</span>
+                      <div className="absolute top-1.5 right-1.5 sm:top-3 sm:right-3 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-md sm:rounded-lg bg-orange-500 text-white font-bold text-[8px] sm:text-[10px] flex items-center gap-0.5 sm:gap-1 shadow-lg">
+                        <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+                        <span className="hidden sm:inline">Before / After</span>
+                        <span className="sm:hidden">B/A</span>
                       </div>
                     )}
 
                     {/* Hover Eye Overlay Icon */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40 backdrop-blur-xs">
-                      <div className="p-3.5 rounded-full bg-orange-500 text-white shadow-2xl scale-95 group-hover:scale-100 transition-transform">
-                        <Eye className="w-6 h-6" />
+                      <div className="p-2 sm:p-3.5 rounded-full bg-orange-500 text-white shadow-2xl scale-95 group-hover:scale-100 transition-transform">
+                        <Eye className="w-4 h-4 sm:w-6 sm:h-6" />
                       </div>
                     </div>
                   </div>
 
                   {/* Info Text */}
-                  <div className="p-5 space-y-2">
-                    <h3 className="text-base font-bold text-white group-hover:text-orange-400 transition">
+                  <div className="p-2.5 sm:p-5 space-y-1 sm:space-y-2">
+                    <h3 className="text-xs sm:text-base font-bold text-white group-hover:text-orange-400 transition leading-snug line-clamp-1">
                       {project.title}
                     </h3>
 
-                    <div className="flex items-center gap-4 text-xs text-neutral-400 font-medium">
-                      <span className="flex items-center gap-1">
-                        <MapPin className="w-3.5 h-3.5 text-orange-500" />
-                        {project.client} ({project.location})
-                      </span>
+                    <div className="flex items-center gap-1 text-[10px] sm:text-xs text-neutral-400 font-medium truncate">
+                      <MapPin className="w-3 h-3 text-orange-500 shrink-0" />
+                      <span className="truncate">{project.client} ({project.location})</span>
                     </div>
 
-                    <p className="text-xs text-neutral-400 leading-relaxed line-clamp-2 pt-1">
+                    <p className="text-[11px] sm:text-xs text-neutral-400 leading-tight sm:leading-relaxed line-clamp-2 pt-0.5 sm:pt-1">
                       {project.description}
                     </p>
 
                     {/* Tags */}
-                    <div className="flex flex-wrap gap-1.5 pt-2">
-                      {project.tags.map((tag, idx) => (
+                    <div className="flex flex-wrap gap-1 sm:gap-1.5 pt-1 sm:pt-2">
+                      {project.tags.slice(0, 2).map((tag, idx) => (
                         <span
                           key={idx}
-                          className="px-2 py-0.5 rounded-md bg-neutral-800 text-[10px] font-medium text-neutral-300 border border-neutral-700/60"
+                          className="px-1.5 py-0.5 rounded bg-neutral-800 text-[9px] sm:text-[10px] font-medium text-neutral-300 border border-neutral-700/60 truncate max-w-[80px]"
                         >
                           #{tag}
                         </span>
