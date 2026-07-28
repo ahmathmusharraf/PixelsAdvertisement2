@@ -1,0 +1,6 @@
+{
+  "name": "Pixels Advertisement",
+  "description": "Premium agency website for Pixels Advertisement in Ajman, UAE — specializing in Signage, Printing, Vehicle Branding, LED Displays, Exhibition Stands, and Digital Marketing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
