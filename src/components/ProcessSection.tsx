@@ -59,8 +59,8 @@ export const ProcessSection: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* 5-Step Connected Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 relative">
+        {/* 5-Step Connected Grid - 2 Columns on Mobile */}
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-2.5 sm:gap-4 relative">
           {steps.map((step, idx) => {
             const Icon = step.icon;
             return (
@@ -68,28 +68,28 @@ export const ProcessSection: React.FC = () => {
                 key={idx}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                viewport={{ once: true, margin: '-30px' }}
+                transition={{ duration: 0.5, delay: idx * 0.08 }}
                 whileHover={{ y: -5 }}
-                className="group p-6 rounded-2xl bg-neutral-900/80 border border-neutral-800 hover:border-orange-500/50 flex flex-col justify-between transition-all duration-300 relative"
+                className="group p-3 sm:p-6 rounded-xl sm:rounded-2xl bg-neutral-900/80 border border-neutral-800 hover:border-orange-500/50 flex flex-col justify-between transition-all duration-300 relative"
               >
                 <div>
                   {/* Step Number Circle */}
-                  <div className="w-12 h-12 rounded-xl bg-orange-500/10 group-hover:bg-orange-500 border border-orange-500/30 text-orange-400 group-hover:text-white font-extrabold text-lg flex items-center justify-center transition-all duration-300 mb-4 shadow-lg shadow-orange-500/10">
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-orange-500/10 group-hover:bg-orange-500 border border-orange-500/30 text-orange-400 group-hover:text-white font-extrabold text-xs sm:text-lg flex items-center justify-center transition-all duration-300 mb-2 sm:mb-4 shadow-lg shadow-orange-500/10">
                     {step.num}
                   </div>
 
-                  <h3 className="text-base font-bold text-white group-hover:text-orange-400 transition mb-2">
+                  <h3 className="text-xs sm:text-base font-bold text-white group-hover:text-orange-400 transition mb-1 sm:mb-2 leading-snug">
                     {step.title}
                   </h3>
 
-                  <p className="text-xs text-neutral-400 leading-relaxed">
+                  <p className="text-[11px] sm:text-xs text-neutral-400 leading-tight sm:leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
 
-                <div className="pt-4 flex justify-end">
-                  <Icon className="w-5 h-5 text-neutral-600 group-hover:text-orange-400 transition" />
+                <div className="pt-2 sm:pt-4 flex justify-end">
+                  <Icon className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-neutral-600 group-hover:text-orange-400 transition" />
                 </div>
               </motion.div>
             );
