@@ -53,10 +53,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenQuoteMod
             Our Services
           </span>
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-            Complete Advertising & <span className="text-orange-500">Branding Solutions</span>
+            Outdoor/Indoor LED Screens & <span className="text-orange-500">Signage Services</span>
           </h2>
           <p className="text-neutral-400 text-xs sm:text-base leading-relaxed">
-            From high-impact 3D LED signboards to vehicle wraps, offset printing, and trade show exhibition booths, we offer end-to-end manufacturing and marketing under one roof in Ajman.
+            Mainly specializing in Outdoor & Indoor LED Display Screens, 3D Signboards, Sticker Branding, Neon Signs, Signage Machinery, Traffic Signs, Business Cards & Flyers, and Bill Books & Flags across Ajman & UAE.
           </p>
         </motion.div>
 
@@ -88,13 +88,6 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenQuoteMod
                   <div className="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-black/80 backdrop-blur-md border border-neutral-700 shadow-lg">
                     {getIcon(service.iconName)}
                   </div>
-
-                  {/* Price Tag if available */}
-                  {service.startingPrice && (
-                    <div className="absolute bottom-1.5 right-1.5 sm:bottom-2.5 sm:right-2.5 px-1.5 py-0.5 sm:px-2 rounded-md sm:rounded-lg bg-orange-500/90 text-white font-bold text-[9px] sm:text-xs shadow">
-                      From {service.startingPrice}
-                    </div>
-                  )}
                 </div>
 
                 {/* Content */}
