@@ -73,10 +73,6 @@ export const Navbar: React.FC<NavbarProps> = ({
               <Clock className="w-3.5 h-3.5 text-orange-500" />
               <span>{companyDetails.workingHours}</span>
             </div>
-            <div className="flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] font-mono">
-              <Lock className="w-3 h-3 text-emerald-400" />
-              <span>HTTPS 256-Bit SSL Secured</span>
-            </div>
           </div>
 
           <div className="flex items-center gap-5">
