@@ -38,7 +38,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onOpenTrackerModal
         >
           <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-[11px] sm:text-sm font-semibold tracking-wide mb-3 sm:mb-6 backdrop-blur-md hover:bg-orange-500/20 transition cursor-default">
             <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-orange-400 animate-pulse shrink-0" />
-            <span className="truncate">Premier Signage & Printing Company in Ajman, UAE</span>
+            <span className="truncate">UAE's #1 Outdoor & Indoor LED Screen & 3D Signage Specialists</span>
           </div>
         </motion.div>
 
@@ -51,30 +51,30 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onOpenTrackerModal
             className="lg:col-span-7 space-y-3 sm:space-y-6 text-center md:text-left"
           >
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-extrabold tracking-tight text-white leading-[1.15]">
-              Transforming Ideas Into{' '}
+              Next-Gen Outdoor & Indoor{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-amber-300">
-                Powerful Visual
+                LED Display Screens
               </span>{' '}
-              Experiences
+              & 3D Signages
             </h1>
 
             <p className="text-xs sm:text-base lg:text-lg 2xl:text-xl text-neutral-300 max-w-2xl font-normal leading-relaxed">
-              {companyDetails.subHeading} Specializing in 3D LED Signage, Grand Format Printing, Commercial Fleet Branding, Exhibition Stands, and Corporate Gifts.
+              {companyDetails.subHeading} Premier manufacturer of Outdoor & Indoor LED Video Display Screens, 3D Illuminated Channel Letters, Vehicle Sticker Branding, Neon Signs, and Signage Machinery Fabrication across UAE.
             </p>
 
             {/* Feature Pills */}
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-1.5 text-[11px] sm:text-sm text-neutral-300 font-medium pt-0.5">
               <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-orange-500" />
-                <span>In-House Fabrication</span>
+                <span>Outdoor & Indoor LED Specialists</span>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-orange-500" />
-                <span>RTA & Municipality Approvals</span>
+                <span>In-House CNC Fabrication</span>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-orange-500" />
-                <span>Fast UAE Delivery</span>
+                <span>Fast UAE Installation</span>
               </motion.div>
             </div>
 
@@ -122,8 +122,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onOpenTrackerModal
               {/* Main Image Banner representing Pixels storefront & vehicle fleet */}
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-neutral-950">
                 <img
-                  src="https://images.unsplash.com/photo-1542744094-3a31b272c490?q=80&w=1200&auto=format&fit=crop"
-                  alt="Pixels Advertisement 3D Signage & Fleet"
+                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop"
+                  alt="Outdoor & Indoor LED Display Screens Pixels Advertisement"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />
@@ -132,7 +132,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onOpenTrackerModal
                 {/* Live Tag overlay */}
                 <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-neutral-700 text-xs font-semibold text-orange-400 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                  <span>3D LED Signage & Outdoor Media</span>
+                  <span>Outdoor & Indoor LED Display Screens</span>
                 </div>
 
                 {/* Bottom Overlay Info */}
