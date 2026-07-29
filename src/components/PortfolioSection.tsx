@@ -13,7 +13,14 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onOpenQuoteM
   const [activeCategory, setActiveCategory] = useState<string>('All');
   const [selectedProject, setSelectedProject] = useState<PortfolioProject | null>(null);
 
-  const categories = ['All', 'Signage', 'Printing', 'Vehicle Branding', 'LED Display', 'Exhibition'];
+  const categories = [
+    'All',
+    'LED Display',
+    'Signage',
+    'Sticker Branding',
+    'Vehicle Branding',
+    'Printing'
+  ];
 
   const filteredProjects = activeCategory === 'All'
     ? portfolioProjects
