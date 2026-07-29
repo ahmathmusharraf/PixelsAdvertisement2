@@ -12,14 +12,15 @@ import {
 export const companyDetails = {
   name: 'Pixels Advertisement',
   arabicName: 'بيكسلز للدعاية والاعلان',
-  tagline: 'Transforming Ideas Into Powerful Visual Experiences',
-  subHeading: 'Creative Advertising Solutions that Elevate Your Brand Across UAE.',
+  tagline: 'UAE’s Leading Outdoor & Indoor LED Screen Specialists & 3D Signage Experts',
+  subHeading: 'Specializing in High-Brightness Outdoor & Indoor LED Display Screens, 3D Illuminated Signboards, Sticker Branding, Neon Signs, and Heavy Machinery Fabrication in Ajman, UAE.',
   address: 'China Mall, Gate No. 6, Opposite Ajman, Al Jerf Industrial 1, Ajman, UAE',
   phone: '+971 52 139 9918',
   phoneClean: '+971521399918',
   email: 'info@pixelsadvertisement.ae',
   whatsapp: '+971521399918',
-  workingHours: 'Monday–Saturday: 9:00 AM – 8:00 PM',
+  workingHours: 'Monday–Saturday: 8:00 AM – 8:30 PM (Sunday Closed)',
+  googleMapsUrl: 'https://maps.app.goo.gl/ENLYyavqa8gwa69e9',
   social: {
     facebook: 'https://facebook.com/pixelsadvertisement',
     instagram: 'https://instagram.com/pixelsadvertisement',
@@ -27,8 +28,8 @@ export const companyDetails = {
     linkedin: 'https://linkedin.com/company/pixelsadvertisement'
   },
   stats: [
-    { label: 'Projects Completed', value: 1000, suffix: '+' },
-    { label: 'Happy Clients', value: 300, suffix: '+' },
+    { label: 'LED & Signage Projects', value: 1000, suffix: '+' },
+    { label: 'Happy UAE Clients', value: 300, suffix: '+' },
     { label: 'Years Experience', value: 10, suffix: '+' },
     { label: 'Client Satisfaction', value: 98, suffix: '%' }
   ]
@@ -36,106 +37,112 @@ export const companyDetails = {
 
 export const servicesData: ServiceItem[] = [
   {
-    id: 'signage',
-    title: 'Signage Solutions',
-    category: 'Signage',
-    shortDesc: 'Custom 3D illuminated & non-illuminated signage crafted with precision engineering.',
-    fullDesc: 'Pixels Advertisement delivers high-impact indoor and outdoor signage designed to capture attention and endure UAE climate conditions. From acrylic 3D channel letters and stainless steel backlit logos to wayfinding systems.',
-    iconName: 'ShieldAlert',
-    image: 'https://images.unsplash.com/photo-1542744094-3a31b272c490?q=80&w=1200&auto=format&fit=crop',
-    items: ['Indoor Signs', 'Outdoor Signs', '3D Sign Boards', 'LED Signs', 'Wayfinding & Pylon Signs', 'Flex Face Lightboxes'],
-    startingPrice: 'AED 450',
-    turnaroundTime: '3-5 Business Days'
-  },
-  {
-    id: 'printing',
-    title: 'Commercial Printing',
-    category: 'Printing',
-    shortDesc: 'Ultra-crisp offset & digital offset printing with premium finishings.',
-    fullDesc: 'Complete business collateral printing under one roof in Ajman. We offer foil stamping, spot UV, matte and gloss lamination, custom die-cutting, and eco-friendly cardstock options.',
-    iconName: 'Printer',
-    image: 'https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?q=80&w=1200&auto=format&fit=crop',
-    items: ['Business Cards', 'Flyers & Leaflets', 'Brochures & Menus', 'Catalogues', 'Posters & Wall Charts', 'Roll-up Banners'],
-    startingPrice: 'AED 99',
-    turnaroundTime: '24-48 Hours'
-  },
-  {
-    id: 'vehicle-branding',
-    title: 'Vehicle Branding',
-    category: 'Vehicle Branding',
-    shortDesc: 'Mobile billboards that turn your fleet into high-frequency advertising.',
-    fullDesc: 'Full and partial vehicle wrapping using top-grade 3M and Avery Dennison cast vinyl with UV-laminated protection. RTA approval guidance and bubble-free seamless application.',
-    iconName: 'Truck',
-    image: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=1200&auto=format&fit=crop',
-    items: ['Car Wrapping', 'Van Wrapping', 'Bus & Fleet Branding', 'Commercial Pickup Graphics', 'Reflective Safety Graphics'],
-    startingPrice: 'AED 650',
-    turnaroundTime: '2-3 Days'
-  },
-  {
-    id: 'led-display',
-    title: 'LED Displays & Video Walls',
-    category: 'LED Display',
-    shortDesc: 'High-brightness, energy-efficient LED screens for indoor & outdoor impact.',
-    fullDesc: 'State-of-the-art P2 to P10 outdoor and indoor LED screen modules, video wall controllers, transparent LED glass screens, and programmable digital signage software.',
+    id: 'led-screens',
+    title: 'Outdoor & Indoor LED Screens',
+    category: 'LED Screens',
+    shortDesc: 'High-brightness, ultra-definition outdoor & indoor LED screens, video walls and digital displays.',
+    fullDesc: 'Custom fabricated P1.8 to P10 LED display screens for indoor shopping malls, retail venues, and outdoor building facades across the UAE. Engineered for maximum brightness, high refresh rate, and heat endurance.',
     iconName: 'Tv',
     image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop',
-    items: ['Indoor LED Screens', 'Outdoor LED Billboards', 'LED Video Walls', 'Digital Window Screens', 'Programmable Scroll LED'],
-    startingPrice: 'AED 2,500',
+    items: ['Outdoor LED Screens', 'Indoor LED Screens', 'LED Video Walls', 'Digital Display Panels', 'Transparent LED Displays'],
     turnaroundTime: '5-7 Days'
   },
   {
-    id: 'exhibition-stands',
-    title: 'Exhibition & Event Booths',
-    category: 'Exhibition Stands',
-    shortDesc: 'Custom tradeshow booths and display systems built to engage visitors.',
-    fullDesc: 'End-to-end event production across Dubai World Trade Centre, ADNEC, and UAE venues. Custom wooden/metal fabrication, LED backdrops, pop-up displays, and audio-visual setups.',
+    id: '3d-signage',
+    title: '3D Signages (Outdoor & Indoor)',
+    category: '3D Signage',
+    shortDesc: 'Custom 3D illuminated channel letters, acrylic & stainless steel back-lit signboards.',
+    fullDesc: 'Premium quality 3D indoor and outdoor signboards crafted with CNC laser precision. From stainless steel backlit logos and 3D acrylic channel letters to rooftop signs.',
+    iconName: 'ShieldAlert',
+    image: 'https://images.unsplash.com/photo-1542744094-3a31b272c490?q=80&w=1200&auto=format&fit=crop',
+    items: ['Outdoor 3D Signage', 'Indoor 3D Signage', '3D Acrylic Channel Letters', 'Stainless Steel Backlit Signs', '3D Illuminated Logos'],
+    turnaroundTime: '3-5 Business Days'
+  },
+  {
+    id: 'sticker-branding',
+    title: 'Sticker Branding',
+    category: 'Sticker Branding',
+    shortDesc: 'High-resolution vinyl sticker printing, vehicle fleet wrapping & glass frosted graphics.',
+    fullDesc: 'Transform your vehicles, retail glass windows, and office walls into powerful branding assets. We use top-grade 3M and Avery cast vinyl with anti-UV lamination.',
+    iconName: 'Truck',
+    image: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=1200&auto=format&fit=crop',
+    items: ['Sticker Branding', 'Vehicle Fleet Wrapping', 'Frosted Glass Stickers', 'Wall Murals & Decals', 'Perforated Window Vinyl'],
+    turnaroundTime: '2-3 Days'
+  },
+  {
+    id: 'neon-signs',
+    title: 'Neon Signs',
+    category: 'Neon Signs',
+    shortDesc: 'Vibrant custom LED flex neon signs for storefronts, cafes & interior branding.',
+    fullDesc: 'Handcrafted LED flex neon signage designed to illuminate your space. Safe, energy-efficient, custom-shaped acrylic backing with multi-color RGB remote control options.',
+    iconName: 'Maximize2',
+    image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=1200&auto=format&fit=crop',
+    items: ['Custom LED Flex Neon', 'Boutique Neon Logos', 'Acrylic Neon Art', 'Open / Closed Neon Signs', 'RGB Multi-Color Neon'],
+    turnaroundTime: '2-3 Days'
+  },
+  {
+    id: 'signage-machinery',
+    title: 'Signage Machinery',
+    category: 'Signage Machinery',
+    shortDesc: 'State-of-the-art CNC laser cutting, acrylic bending & industrial fabrication.',
+    fullDesc: 'In-house manufacturing facility equipped with heavy-duty CNC fiber laser cutters, channel letter automatic bending machines, UV flatbed printers, and sheet metal routers.',
     iconName: 'Layers',
-    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200&auto=format&fit=crop',
-    items: ['Custom Booths', 'Modular Fabric Backdrops', 'Display Counters & Systems', 'Event Photo Walls', 'Portable Truss Systems'],
-    startingPrice: 'AED 1,800',
-    turnaroundTime: '4-7 Days'
+    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop',
+    items: ['Signage Machinery Works', 'CNC Fiber Laser Cutting', 'Channel Letter Bending', 'UV Flatbed Printing', 'ACP Sheet Routing'],
+    turnaroundTime: '1-3 Days'
   },
   {
-    id: 'digital-marketing',
-    title: 'Digital Marketing & Identity',
-    category: 'Digital Marketing',
-    shortDesc: 'Strategic social media management, brand guidelines, and visual content.',
-    fullDesc: 'Empower your brand online with localized UAE marketing campaigns, creative graphic design, motion graphics video production, and conversion-oriented social media strategy.',
+    id: 'traffic-signs',
+    title: 'Traffic Signs',
+    category: 'Traffic Signs',
+    shortDesc: '3M reflective traffic signs, directional wayfinding & road safety boards.',
+    fullDesc: 'UAE municipality compliant traffic and safety signage manufactured with high-intensity 3M reflective sheeting, rust-proof aluminum substrate, and heavy-duty posts.',
     iconName: 'Globe',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
-    items: ['Social Media Management', 'Brand Identity & Logo Design', 'Campaign Graphic Design', 'Video & Reels Production', 'SEO & Ad Content'],
-    startingPrice: 'AED 1,200/mo',
-    turnaroundTime: 'Ongoing / Project based'
+    image: 'https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=1200&auto=format&fit=crop',
+    items: ['Reflective Traffic Signs', 'Directional Wayfinding Signs', 'Construction Safety Boards', 'Parking Signs', 'Custom Road Signs'],
+    turnaroundTime: '2-4 Days'
   },
   {
-    id: 'promotional-gifts',
-    title: 'Promotional & Corporate Gifts',
-    category: 'Promotional Gifts',
-    shortDesc: 'Branded corporate merchandise, custom apparel, and gift sets.',
-    fullDesc: 'Premium promotional giveaways customized with laser engraving, screen printing, or UV print. Leather executive notebooks, power banks, custom drinkware, and embroidered uniforms.',
+    id: 'business-cards-flyers',
+    title: 'Business Card, Flyer',
+    category: 'Business Card, Flyer',
+    shortDesc: 'Ultra-crisp offset & digital printing for business cards, flyers, and brochures.',
+    fullDesc: 'High-volume offset & fast digital printing for luxury business cards, promotional flyers, trifold brochures, menus, and corporate stationery with foil & spot UV options.',
+    iconName: 'Printer',
+    image: 'https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?q=80&w=1200&auto=format&fit=crop',
+    items: ['Luxury Business Cards', 'Promotional Flyers', 'Brochures & Leaflets', 'Company Profiles', 'Menus & Folders'],
+    turnaroundTime: '24-48 Hours'
+  },
+  {
+    id: 'bill-books-flags',
+    title: 'Bill Book & Flags',
+    category: 'Bill Book & Flags',
+    shortDesc: 'Custom carbonless NCR bill books, teardrop outdoor flags & promotional banners.',
+    fullDesc: 'Customized duplicate/triplicate NCR invoice bill books, order receipt books, teardrop & feather beach flags, trade show pop-up banners, and corporate rubber stamps.',
     iconName: 'Gift',
     image: 'https://images.unsplash.com/photo-1513885535751-8b9238bd345a?q=80&w=1200&auto=format&fit=crop',
-    items: ['Corporate Gift Boxes', 'Branded Drinkware & Tech', 'Custom T-Shirts & Caps', 'Uniform Embroidery', 'Keychains & Lanyards'],
-    startingPrice: 'AED 25 / item',
-    turnaroundTime: '3-5 Days'
-  },
-  {
-    id: 'large-format',
-    title: 'Large Format Printing',
-    category: 'Large Format Printing',
-    shortDesc: 'High-resolution grand format graphics on vinyl, canvas, and ACP cladding.',
-    fullDesc: 'Japanese Roland & Mimaki eco-solvent printing up to 3.2m width. Custom frosted glass film, wall murals, building wraps, acrylic laser cutting, and aluminum composite cladding.',
-    iconName: 'Maximize2',
-    image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?q=80&w=1200&auto=format&fit=crop',
-    items: ['Custom Wallpaper Murals', 'Frosted Glass Stickers', 'Window Graphics & Perforated Vinyl', 'ACP Cladding Graphics', 'Canvas Printing'],
-    startingPrice: 'AED 45 / sq.m',
-    turnaroundTime: '1-2 Days'
+    items: ['NCR Duplicate Bill Books', 'Feather & Teardrop Flags', 'Roll-up Banners', 'Company Seals & Stamps', 'Event Flags & Banners'],
+    turnaroundTime: '1-3 Days'
   }
 ];
 
 export const portfolioProjects: PortfolioProject[] = [
   {
     id: 'proj-1',
+    title: 'Outdoor & Indoor P3.91 Giant LED Display Wall',
+    category: 'LED Display',
+    client: 'China Mall Commercial Facade',
+    location: 'Gate 6, China Mall, Ajman',
+    completionYear: '2026',
+    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&auto=format&fit=crop',
+    beforeImage: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1000&auto=format&fit=crop',
+    afterImage: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&auto=format&fit=crop',
+    description: 'High refresh rate outdoor & indoor LED video display screen with auto-brightness sensors and remote cloud content scheduling.',
+    tags: ['Outdoor LED', 'Indoor LED Wall', 'High Brightness'],
+    featured: true
+  },
+  {
+    id: 'proj-2',
     title: '3D Illuminated Storefront Signboard',
     category: 'Signage',
     client: 'Gym Nation Ajman',
@@ -149,7 +156,7 @@ export const portfolioProjects: PortfolioProject[] = [
     featured: true
   },
   {
-    id: 'proj-2',
+    id: 'proj-3',
     title: 'Spicy Hub Restaurant Neon & LED Facade',
     category: 'Signage',
     client: 'Spicy Hub Restaurant',
@@ -163,8 +170,8 @@ export const portfolioProjects: PortfolioProject[] = [
     featured: true
   },
   {
-    id: 'proj-3',
-    title: 'Commercial Van Fleet Cast Wrapping',
+    id: 'proj-4',
+    title: 'Commercial Fleet Sticker Branding Wrap',
     category: 'Vehicle Branding',
     client: 'Pixels Service Fleet',
     location: 'Ajman & Dubai',
@@ -173,19 +180,7 @@ export const portfolioProjects: PortfolioProject[] = [
     beforeImage: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1000&auto=format&fit=crop',
     afterImage: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=1000&auto=format&fit=crop',
     description: 'Full body 3M vinyl vehicle wrap with UV glossy laminate protection and precise door seam trimming for 5 service vans.',
-    tags: ['3M Cast Vinyl', 'Fleet Wrap', 'RTA Approved'],
-    featured: true
-  },
-  {
-    id: 'proj-4',
-    title: 'China Mall Gate Outdoor P3 LED Screen',
-    category: 'LED Display',
-    client: 'China Mall Management',
-    location: 'Gate 6, China Mall, Ajman',
-    completionYear: '2024',
-    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&auto=format&fit=crop',
-    description: 'High refresh rate outdoor P3.91 LED billboard with auto-brightness sensors and remote cloud content scheduling software.',
-    tags: ['Outdoor LED', 'Video Wall', 'High Brightness'],
+    tags: ['Sticker Branding', '3M Cast Vinyl', 'RTA Approved'],
     featured: true
   },
   {
