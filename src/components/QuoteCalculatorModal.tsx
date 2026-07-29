@@ -79,10 +79,14 @@ export const QuoteCalculatorModal: React.FC<QuoteCalculatorModalProps> = ({
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-2">
                   {[
-                    '3D LED Signage',
-                    'Commercial Printing',
-                    'Vehicle Fleet Wrap',
-                    'LED Video Display'
+                    'LED Screens',
+                    '3D Signage',
+                    'Sticker Branding',
+                    'Neon Signs',
+                    'Signage Machinery',
+                    'Traffic Signs',
+                    'Business Cards & Flyers',
+                    'Bill Book & Flags'
                   ].map((st) => (
                     <button
                       key={st}
