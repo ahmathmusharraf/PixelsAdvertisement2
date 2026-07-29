@@ -61,7 +61,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto flex items-center justify-between">
           <div className="flex items-center gap-6">
             <a
-              href="https://maps.google.com"
+              href={companyDetails.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 hover:text-orange-400 transition"
