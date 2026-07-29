@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { companyDetails } from '../data/pixelsData';
-import { Palette, Cpu, Users, Zap, Tag, Check, Award, Target, Eye } from 'lucide-react';
+import { Palette, Cpu, Users, Zap, Tag, Check, Award, Target, Eye, Quote, UserCheck } from 'lucide-react';
 
 interface AboutUsProps {
   onOpenQuoteModal: () => void;
 }
 
 export const AboutUs: React.FC<AboutUsProps> = ({ onOpenQuoteModal }) => {
-  const [activeTab, setActiveTab] = useState<'why' | 'mission' | 'vision'>('why');
+  const [activeTab, setActiveTab] = useState<'why' | 'mission' | 'vision' | 'founder'>('founder');
 
   const highlights = [
     { title: 'Creative Design', icon: Palette, desc: 'Tailored branding that captures attention.' },
@@ -88,14 +88,25 @@ export const AboutUs: React.FC<AboutUsProps> = ({ onOpenQuoteModal }) => {
             </div>
 
             <p className="text-base text-neutral-300 leading-relaxed">
-              Pixels Advertisement is a full-service advertising and branding company based in Ajman, UAE, delivering innovative signage, printing, branding, digital marketing, and visual communication solutions. We combine advanced machinery with artistic craftsmanship to turn business spaces into memorable brand landmarks.
+              Pixels Advertisement is the premier LED display and signage company based in Ajman, UAE. We specialize in high-brightness Outdoor & Indoor LED Screens, 3D Illuminated Signboards, Sticker Branding, Neon Signs, Signage Machinery fabrication, Traffic Signs, Business Cards & Flyers, and Bill Books & Flags across the Emirates.
             </p>
 
-            {/* Sub-tab Selection: Why Choose Us / Mission / Vision */}
-            <div className="flex items-center gap-2 border-b border-neutral-800 pb-2">
+            {/* Sub-tab Selection: Founder Message / Why Choose Us / Mission / Vision */}
+            <div className="flex flex-wrap items-center gap-2 border-b border-neutral-800 pb-2">
+              <button
+                onClick={() => setActiveTab('founder')}
+                className={`px-3.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition flex items-center gap-1.5 cursor-pointer ${
+                  activeTab === 'founder'
+                    ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/20'
+                    : 'text-neutral-400 hover:text-white bg-neutral-900'
+                }`}
+              >
+                <Quote className="w-4 h-4" />
+                <span>Founder's Message</span>
+              </button>
               <button
                 onClick={() => setActiveTab('why')}
-                className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition flex items-center gap-1.5 cursor-pointer ${
+                className={`px-3.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition flex items-center gap-1.5 cursor-pointer ${
                   activeTab === 'why'
                     ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/20'
                     : 'text-neutral-400 hover:text-white bg-neutral-900'
@@ -106,7 +117,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ onOpenQuoteModal }) => {
               </button>
               <button
                 onClick={() => setActiveTab('mission')}
-                className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition flex items-center gap-1.5 cursor-pointer ${
+                className={`px-3.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition flex items-center gap-1.5 cursor-pointer ${
                   activeTab === 'mission'
                     ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/20'
                     : 'text-neutral-400 hover:text-white bg-neutral-900'
@@ -117,7 +128,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ onOpenQuoteModal }) => {
               </button>
               <button
                 onClick={() => setActiveTab('vision')}
-                className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition flex items-center gap-1.5 cursor-pointer ${
+                className={`px-3.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition flex items-center gap-1.5 cursor-pointer ${
                   activeTab === 'vision'
                     ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/20'
                     : 'text-neutral-400 hover:text-white bg-neutral-900'
@@ -130,6 +141,49 @@ export const AboutUs: React.FC<AboutUsProps> = ({ onOpenQuoteModal }) => {
 
             {/* Content Area according to Tab */}
             <AnimatePresence mode="wait">
+              {activeTab === 'founder' && (
+                <motion.div 
+                  key="founder"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                  className="p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-900/90 to-neutral-950 border border-orange-500/30 relative overflow-hidden shadow-xl"
+                >
+                  <Quote className="absolute top-3 right-4 w-12 h-12 text-orange-500/10 pointer-events-none" />
+                  
+                  <div className="flex items-start gap-3.5 mb-3">
+                    <div className="w-12 h-12 rounded-xl bg-orange-500/20 border border-orange-500/40 text-orange-400 flex items-center justify-center shrink-0 shadow-inner">
+                      <UserCheck className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h4 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+                        <span>Message From The Founder</span>
+                        <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-orange-500/20 text-orange-400 border border-orange-500/30">
+                          Leadership
+                        </span>
+                      </h4>
+                      <p className="text-xs text-orange-400 font-semibold">Pixels Advertisement — Ajman, UAE</p>
+                    </div>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed italic relative z-10 font-normal">
+                    "When we established Pixels Advertisement at China Mall in Ajman, our goal was clear: to bring state-of-the-art Outdoor & Indoor LED screen displays and high-precision 3D signage to businesses across the UAE. We believe every brand deserves a commanding visual presence that inspires trust and grabs immediate attention. Through heavy investment in in-house CNC fiber laser cutting, high-refresh LED video wall engineering, and dedicated craftsmanship, we ensure that every project we deliver stands out for durability and brilliance."
+                  </p>
+
+                  <div className="mt-4 pt-3 border-t border-neutral-800/80 flex items-center justify-between text-xs">
+                    <div>
+                      <p className="font-extrabold text-white text-sm">Founder & Managing Director</p>
+                      <p className="text-neutral-400 text-[11px]">Pixels Advertisement & Signage Industry</p>
+                    </div>
+                    <div className="text-right hidden sm:block">
+                      <p className="text-orange-400 font-mono font-bold text-[11px]">China Mall, Gate 6, Ajman</p>
+                      <p className="text-neutral-500 text-[10px]">Over 1,000+ Projects Installed</p>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+
               {activeTab === 'why' && (
                 <motion.div 
                   key="why"
