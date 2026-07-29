@@ -246,7 +246,7 @@ export const ContactSection: React.FC = () => {
 
             <div className="relative z-10 pt-4">
               <a
-                href="https://maps.google.com/?q=China+Mall+Gate+6+Ajman"
+                href={companyDetails.googleMapsUrl || "https://maps.app.goo.gl/ENLYyavqa8gwa69e9"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-2.5 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 border border-neutral-700 cursor-pointer"
