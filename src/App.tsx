@@ -17,6 +17,7 @@ import { FloatingActions } from './components/FloatingActions';
 import { MobileBottomNav } from './components/MobileBottomNav';
 import { QuoteCalculatorModal } from './components/QuoteCalculatorModal';
 import { OrderTrackerModal } from './components/OrderTrackerModal';
+import { PrivacyTermsModal } from './components/PrivacyTermsModal';
 import { faqsData } from './data/pixelsData';
 import { HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
 
@@ -25,11 +26,18 @@ export default function App() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState<boolean>(false);
   const [quotePreselectedService, setQuotePreselectedService] = useState<string | undefined>(undefined);
   const [isTrackerModalOpen, setIsTrackerModalOpen] = useState<boolean>(false);
+  const [isPolicyModalOpen, setIsPolicyModalOpen] = useState<boolean>(false);
+  const [policyModalTab, setPolicyModalTab] = useState<'privacy' | 'terms'>('privacy');
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   const handleOpenQuoteModal = (preselected?: string) => {
     setQuotePreselectedService(preselected);
     setIsQuoteModalOpen(true);
+  };
+
+  const handleOpenPolicyModal = (tab: 'privacy' | 'terms' = 'privacy') => {
+    setPolicyModalTab(tab);
+    setIsPolicyModalOpen(true);
   };
 
   const handleNavigate = (sectionId: string) => {
@@ -146,7 +154,11 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <Footer onNavigate={handleNavigate} onOpenQuoteModal={() => handleOpenQuoteModal()} />
+      <Footer
+        onNavigate={handleNavigate}
+        onOpenQuoteModal={() => handleOpenQuoteModal()}
+        onOpenPolicyModal={handleOpenPolicyModal}
+      />
 
       {/* Floating Action Buttons */}
       <FloatingActions
@@ -172,6 +184,13 @@ export default function App() {
       <OrderTrackerModal
         isOpen={isTrackerModalOpen}
         onClose={() => setIsTrackerModalOpen(false)}
+      />
+
+      {/* Privacy Policy & Terms & Conditions Modal */}
+      <PrivacyTermsModal
+        isOpen={isPolicyModalOpen}
+        onClose={() => setIsPolicyModalOpen(false)}
+        initialTab={policyModalTab}
       />
     </div>
   );
