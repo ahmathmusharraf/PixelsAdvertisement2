@@ -7,9 +7,10 @@ import { FacebookIcon, InstagramIcon, TikTokIcon, WhatsAppIcon, LinkedInIcon } f
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
   onOpenQuoteModal: () => void;
+  onOpenPolicyModal?: (tab: 'privacy' | 'terms') => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenQuoteModal }) => {
+export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenQuoteModal, onOpenPolicyModal }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -188,10 +189,20 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenQuoteModal }) 
             </p>
           </div>
 
-          <div className="flex items-center gap-4">
-            <a href="#contact" className="hover:text-orange-400 transition">Privacy Policy</a>
-            <span>•</span>
-            <a href="#contact" className="hover:text-orange-400 transition">Terms & Conditions</a>
+          <div className="flex items-center gap-4 text-xs font-medium">
+            <button
+              onClick={() => onOpenPolicyModal?.('privacy')}
+              className="hover:text-orange-400 transition cursor-pointer"
+            >
+              Privacy Policy
+            </button>
+            <span className="text-neutral-600">•</span>
+            <button
+              onClick={() => onOpenPolicyModal?.('terms')}
+              className="hover:text-orange-400 transition cursor-pointer"
+            >
+              Terms & Conditions
+            </button>
           </div>
 
           {/* Back to top button */}
