@@ -226,70 +226,62 @@ export const portfolioProjects: PortfolioProject[] = [
 export const teamMembers: TeamMember[] = [
   {
     id: 'team-1',
-    name: 'Rizwan Farook',
-    role: 'Managing Director',
+    name: 'Danyal (Pwng Liu)',
+    role: 'CEO & Founder',
     department: 'Leadership',
-    bio: 'Over 14 years driving visual advertising excellence in UAE. Passionate about innovation, top-quality materials, and building long-term client trust.',
+    bio: 'Visionary founder leading Pixels Advertisement to become the premier outdoor & indoor LED display screen and 3D signage specialist in the UAE.',
     photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop',
     linkedin: 'https://linkedin.com'
   },
   {
     id: 'team-2',
-    name: 'Nishad Nizar',
-    role: 'Creative Director',
-    department: 'Leadership',
-    bio: 'Visual strategy specialist leading our high-concept design department. Expert in 3D signage modeling, typography, and identity architecture.',
+    name: 'Nero',
+    role: 'Assistant Operation Manager',
+    department: 'Operations & HR',
+    bio: 'Streamlining operational workflows, project execution timelines, on-site installation logistics, and client coordination.',
     photo: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop',
     linkedin: 'https://linkedin.com'
   },
   {
     id: 'team-3',
-    name: 'Faisal Khan',
-    role: 'Production Manager',
-    department: 'Leadership',
-    bio: 'Oversees CNC laser cutting, LED assembly, and grand format printing workflows ensuring flawless execution and on-time delivery.',
-    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop',
+    name: 'Alex Aquino',
+    role: 'Human Resource',
+    department: 'Operations & HR',
+    bio: 'Managing talent acquisition, employee relations, workspace welfare, and organizational culture at Pixels Advertisement.',
+    photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop',
     linkedin: 'https://linkedin.com'
   },
   {
     id: 'team-4',
-    name: 'Tharindu Perera',
-    role: 'Graphic Designer',
+    name: 'Roney Thomas',
+    role: 'Design Manager',
     department: 'Creative Team',
-    bio: 'Senior print & vector precision designer focused on vibrant color profiles, large format layout accuracy, and branding mockups.',
-    photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop'
+    bio: 'Directing 3D signage design, LED display layout visualizers, vector branding architecture, and creative artwork approvals.',
+    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop'
   },
   {
     id: 'team-5',
-    name: 'Ishara Silva',
-    role: 'UI/UX & Brand Specialist',
+    name: 'Tony Thomas',
+    role: 'Designer',
     department: 'Creative Team',
-    bio: 'Crafting modern digital design, digital signage UX, and cohesive brand systems for physical & online touchpoints.',
-    photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop'
+    bio: 'Specializing in high-precision vector layouts, 3D channel letter mockups, grand format artwork prepress, and branding assets.',
+    photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop'
   },
   {
     id: 'team-6',
-    name: 'Samith Perera',
-    role: 'Installation Supervisor',
-    department: 'Production Team',
-    bio: 'Certified site installation expert leading structural mounting, high-rise boom crane installations, and safety compliance across UAE.',
-    photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop'
+    name: 'Susan Roney Thomas',
+    role: 'Junior Accountant',
+    department: 'Finance',
+    bio: 'Overseeing corporate accounts, client invoicing, vendor statements, financial bookkeeping, and audit preparation.',
+    photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop'
   },
   {
     id: 'team-7',
-    name: 'Dilshan Jay',
-    role: 'Digital Marketing Head',
-    department: 'Digital Marketing',
-    bio: 'Data-driven performance marketer specializing in UAE local SEO, Google Ads, and high-ROI Meta ad campaigns.',
-    photo: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=600&auto=format&fit=crop'
-  },
-  {
-    id: 'team-8',
-    name: 'Fathima Rizvi',
-    role: 'Social Media Manager',
-    department: 'Digital Marketing',
-    bio: 'Creating viral reels, engaging social media graphics, and brand stories that resonate with diverse audiences across the Gulf.',
-    photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop'
+    name: 'Saroj Khan',
+    role: 'Production Manager',
+    department: 'Production Team',
+    bio: 'Supervising CNC laser cutting, indoor & outdoor LED screen assembly, channel letter fabrication, and quality assurance.',
+    photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop'
   }
 ];
 
