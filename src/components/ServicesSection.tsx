@@ -56,7 +56,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenQuoteMod
             Outdoor/Indoor LED Screens & <span className="text-orange-500">Signage Services</span>
           </h2>
           <p className="text-neutral-400 text-xs sm:text-base leading-relaxed">
-            Mainly specializing in Outdoor & Indoor LED Display Screens, 3D Signboards, Sticker Branding, Neon Signs, Signage Machinery, Traffic Signs, Business Cards & Flyers, and Bill Books & Flags across Ajman & UAE.
+            Mainly specializing in Outdoor & Indoor LED Display Screens, 3D Signboards, Sticker Branding, Neon Signs, Traffic Signs, Business Cards & Flyers, and Bill Books & Flags across Ajman & UAE.
           </p>
         </motion.div>
 
