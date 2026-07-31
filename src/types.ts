@@ -30,7 +30,7 @@ export interface TeamMember {
   id: string;
   name: string;
   role: string;
-  department: 'Leadership' | 'Creative Team' | 'Production Team' | 'Digital Marketing';
+  department: 'Leadership' | 'Creative Team' | 'Production Team' | 'Operations & HR' | 'Finance' | 'Digital Marketing' | string;
   bio: string;
   photo: string;
   linkedin?: string;
