@@ -59,7 +59,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onOpenTrackerModal
             </h1>
 
             <p className="text-xs sm:text-base lg:text-lg 2xl:text-xl text-neutral-300 max-w-2xl font-normal leading-relaxed">
-              {companyDetails.subHeading} Premier manufacturer of Outdoor & Indoor LED Video Display Screens, 3D Illuminated Channel Letters, Vehicle Sticker Branding, Neon Signs, and Signage Machinery Fabrication across UAE.
+              {companyDetails.subHeading} Premier manufacturer of Outdoor & Indoor LED Video Display Screens, 3D Illuminated Channel Letters, Vehicle Sticker Branding, Neon Signs, and Commercial Printing across UAE.
             </p>
 
             {/* Feature Pills */}
