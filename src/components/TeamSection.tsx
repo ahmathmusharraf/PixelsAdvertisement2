@@ -5,7 +5,7 @@ import { Linkedin, Mail, Star, Users } from 'lucide-react';
 export const TeamSection: React.FC = () => {
   const [activeDept, setActiveDept] = useState<string>('All');
 
-  const departments = ['All', 'Leadership', 'Creative Team', 'Production Team', 'Digital Marketing'];
+  const departments = ['All', 'Leadership', 'Operations & HR', 'Creative Team', 'Production Team', 'Finance'];
 
   const filteredTeam = activeDept === 'All'
     ? teamMembers
