@@ -230,7 +230,7 @@ export const teamMembers: TeamMember[] = [
     role: 'CEO & Founder',
     department: 'Leadership',
     bio: 'Visionary founder leading Pixels Advertisement to become the premier outdoor & indoor LED display screen and 3D signage specialist in the UAE.',
-    photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop',
+    photo: '/Danyal.jpg',
     linkedin: 'https://linkedin.com'
   },
   {
@@ -239,7 +239,7 @@ export const teamMembers: TeamMember[] = [
     role: 'Assistant Operation Manager',
     department: 'Operations & HR',
     bio: 'Streamlining operational workflows, project execution timelines, on-site installation logistics, and client coordination.',
-    photo: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop',
+    photo: '/Nero.jpg',
     linkedin: 'https://linkedin.com'
   },
   {
@@ -248,7 +248,7 @@ export const teamMembers: TeamMember[] = [
     role: 'Human Resource',
     department: 'Operations & HR',
     bio: 'Managing talent acquisition, employee relations, workspace welfare, and organizational culture at Pixels Advertisement.',
-    photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop',
+    photo: '/Alex.jpg',
     linkedin: 'https://linkedin.com'
   },
   {
@@ -257,7 +257,7 @@ export const teamMembers: TeamMember[] = [
     role: 'Design Manager',
     department: 'Creative Team',
     bio: 'Directing 3D signage design, LED display layout visualizers, vector branding architecture, and creative artwork approvals.',
-    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop'
+    photo: '/Roney.jpg'
   },
   {
     id: 'team-5',
@@ -265,7 +265,7 @@ export const teamMembers: TeamMember[] = [
     role: 'Designer',
     department: 'Creative Team',
     bio: 'Specializing in high-precision vector layouts, 3D channel letter mockups, grand format artwork prepress, and branding assets.',
-    photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop'
+    photo: '/Tony.jpg'
   },
   {
     id: 'team-6',
@@ -273,7 +273,7 @@ export const teamMembers: TeamMember[] = [
     role: 'Junior Accountant',
     department: 'Finance',
     bio: 'Overseeing corporate accounts, client invoicing, vendor statements, financial bookkeeping, and audit preparation.',
-    photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop'
+    photo: '/Susan.jpg'
   },
   {
     id: 'team-7',
@@ -281,7 +281,7 @@ export const teamMembers: TeamMember[] = [
     role: 'Production Manager',
     department: 'Production Team',
     bio: 'Supervising CNC laser cutting, indoor & outdoor LED screen assembly, channel letter fabrication, and quality assurance.',
-    photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop'
+    photo: '/Saroj.jpg'
   }
 ];
 
