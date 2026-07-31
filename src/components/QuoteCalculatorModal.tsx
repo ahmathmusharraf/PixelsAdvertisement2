@@ -14,11 +14,12 @@ export const QuoteCalculatorModal: React.FC<QuoteCalculatorModalProps> = ({
   onClose,
   preselectedService
 }) => {
-  const [serviceType, setServiceType] = useState<string>(preselectedService || '3D LED Signage');
-  const [widthFt, setWidthFt] = useState<number>(10);
-  const [heightFt, setHeightFt] = useState<number>(3);
+  const [serviceType, setServiceType] = useState<string>(preselectedService || 'LED Screens');
+  const [ledPitch, setLedPitch] = useState<string>('Outdoor P2.5');
+  const [widthCm, setWidthCm] = useState<number>(300);
+  const [heightCm, setHeightCm] = useState<number>(100);
   const [quantity, setQuantity] = useState<number>(1);
-  const [material, setMaterial] = useState<string>('Standard Acrylic');
+  const [material, setMaterial] = useState<string>('Cast Acrylic / LED Module');
   const [illumination, setIllumination] = useState<boolean>(true);
   const [installation, setInstallation] = useState<boolean>(true);
   const [urgency, setUrgency] = useState<'Standard' | 'Express'>('Standard');
@@ -27,7 +28,8 @@ export const QuoteCalculatorModal: React.FC<QuoteCalculatorModalProps> = ({
   const [notes, setNotes] = useState<string>('');
 
   const handleSendWhatsAppQuote = () => {
-    const text = `*Custom Quote Request - Pixels Website*%0A%0A*Name:* ${clientName || 'Valued Client'}%0A*Phone:* ${clientPhone || 'N/A'}%0A*Service:* ${serviceType}%0A*Dimensions:* ${widthFt}ft x ${heightFt}ft (${widthFt * heightFt} sq.ft)%0A*Quantity:* ${quantity}%0A*Material:* ${material}%0A*Illumination:* ${illumination ? 'Yes (LED)' : 'No'}%0A*Installation:* ${installation ? 'Yes' : 'No'}%0A*Urgency:* ${urgency}${notes ? `%0A*Notes:* ${notes}` : ''}`;
+    const pitchText = serviceType === 'LED Screens' ? `%0A*LED Pitch:* ${ledPitch}` : '';
+    const text = `*Custom Quote Request - Pixels Website*%0A%0A*Name:* ${clientName || 'Valued Client'}%0A*Phone:* ${clientPhone || 'N/A'}%0A*Service:* ${serviceType}${pitchText}%0A*Dimensions:* ${widthCm} cm x ${heightCm} cm%0A*Quantity:* ${quantity}%0A*Material:* ${material}%0A*Illumination:* ${illumination ? 'Yes (LED)' : 'No'}%0A*Installation:* ${installation ? 'Yes' : 'No'}%0A*Urgency:* ${urgency}${notes ? `%0A*Notes:* ${notes}` : ''}`;
     window.open(`https://wa.me/${companyDetails.whatsapp}?text=${text}`, '_blank');
   };
 
@@ -83,7 +85,6 @@ export const QuoteCalculatorModal: React.FC<QuoteCalculatorModalProps> = ({
                     '3D Signage',
                     'Sticker Branding',
                     'Neon Signs',
-                    'Signage Machinery',
                     'Traffic Signs',
                     'Business Cards & Flyers',
                     'Bill Book & Flags'
@@ -104,35 +105,109 @@ export const QuoteCalculatorModal: React.FC<QuoteCalculatorModalProps> = ({
                 </div>
               </div>
 
-              {/* Dimensions Sliders */}
+              {/* LED Pixel Pitch Selection when LED Screens is selected or as an option */}
+              {serviceType === 'LED Screens' && (
+                <div className="bg-neutral-900/90 p-3 sm:p-4 rounded-xl border border-orange-500/30 space-y-2">
+                  <label className="block text-[10px] sm:text-xs font-bold text-orange-400 font-mono uppercase flex items-center justify-between">
+                    <span>2. Select LED Pixel Pitch Spec</span>
+                    <span className="text-neutral-400 font-sans font-normal text-[10px]">High Refresh Rate & Brightness</span>
+                  </label>
+                  
+                  <div className="space-y-2">
+                    <div>
+                      <span className="text-[10px] text-neutral-400 font-bold block mb-1">OUTDOOR LED SCREENS:</span>
+                      <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
+                        {['Outdoor P2.5', 'Outdoor P6', 'Outdoor P10'].map((p) => (
+                          <button
+                            key={p}
+                            type="button"
+                            onClick={() => setLedPitch(p)}
+                            className={`py-1.5 px-2 rounded-lg text-[10px] sm:text-xs font-bold transition border cursor-pointer ${
+                              ledPitch === p
+                                ? 'bg-orange-500 text-white border-orange-400 shadow-md shadow-orange-500/20'
+                                : 'bg-neutral-950 text-neutral-300 border-neutral-800 hover:border-neutral-700'
+                            }`}
+                          >
+                            {p}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div>
+                      <span className="text-[10px] text-neutral-400 font-bold block mb-1">INDOOR LED SCREENS:</span>
+                      <div className="grid grid-cols-4 gap-1.5 sm:gap-2">
+                        {['Indoor P1.5', 'Indoor P1.8', 'Indoor P2.5', 'Indoor P3'].map((p) => (
+                          <button
+                            key={p}
+                            type="button"
+                            onClick={() => setLedPitch(p)}
+                            className={`py-1.5 px-2 rounded-lg text-[10px] sm:text-xs font-bold transition border cursor-pointer ${
+                              ledPitch === p
+                                ? 'bg-orange-500 text-white border-orange-400 shadow-md shadow-orange-500/20'
+                                : 'bg-neutral-950 text-neutral-300 border-neutral-800 hover:border-neutral-700'
+                            }`}
+                          >
+                            {p}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Dimensions Inputs & Sliders (in cm) */}
               <div className="grid grid-cols-2 gap-2 sm:gap-4 bg-neutral-900/60 p-2 sm:p-4 rounded-lg sm:rounded-xl border border-neutral-800">
                 <div>
-                  <div className="flex justify-between text-[10px] sm:text-xs font-semibold text-neutral-300 mb-0.5 sm:mb-1">
-                    <span>Width:</span>
-                    <span className="text-orange-400 font-bold">{widthFt} ft</span>
+                  <div className="flex justify-between items-center text-[10px] sm:text-xs font-semibold text-neutral-300 mb-1">
+                    <span>Width (cm):</span>
+                    <div className="flex items-center gap-1">
+                      <input
+                        type="number"
+                        min={10}
+                        max={3000}
+                        value={widthCm}
+                        onChange={(e) => setWidthCm(Math.max(1, Number(e.target.value)))}
+                        className="w-16 sm:w-20 px-1.5 py-0.5 rounded bg-neutral-950 border border-neutral-700 text-right text-orange-400 font-bold text-xs focus:outline-none focus:border-orange-500"
+                      />
+                      <span className="text-orange-400 font-bold">cm</span>
+                    </div>
                   </div>
                   <input
                     type="range"
-                    min={2}
-                    max={50}
-                    value={widthFt}
-                    onChange={(e) => setWidthFt(Number(e.target.value))}
-                    className="w-full accent-orange-500 cursor-pointer h-1.5"
+                    min={10}
+                    max={1500}
+                    step={5}
+                    value={widthCm}
+                    onChange={(e) => setWidthCm(Number(e.target.value))}
+                    className="w-full accent-orange-500 cursor-pointer h-1.5 mt-1"
                   />
                 </div>
 
                 <div>
-                  <div className="flex justify-between text-[10px] sm:text-xs font-semibold text-neutral-300 mb-0.5 sm:mb-1">
-                    <span>Height:</span>
-                    <span className="text-orange-400 font-bold">{heightFt} ft</span>
+                  <div className="flex justify-between items-center text-[10px] sm:text-xs font-semibold text-neutral-300 mb-1">
+                    <span>Height (cm):</span>
+                    <div className="flex items-center gap-1">
+                      <input
+                        type="number"
+                        min={10}
+                        max={2000}
+                        value={heightCm}
+                        onChange={(e) => setHeightCm(Math.max(1, Number(e.target.value)))}
+                        className="w-16 sm:w-20 px-1.5 py-0.5 rounded bg-neutral-950 border border-neutral-700 text-right text-orange-400 font-bold text-xs focus:outline-none focus:border-orange-500"
+                      />
+                      <span className="text-orange-400 font-bold">cm</span>
+                    </div>
                   </div>
                   <input
                     type="range"
-                    min={1}
-                    max={20}
-                    value={heightFt}
-                    onChange={(e) => setHeightFt(Number(e.target.value))}
-                    className="w-full accent-orange-500 cursor-pointer h-1.5"
+                    min={10}
+                    max={800}
+                    step={5}
+                    value={heightCm}
+                    onChange={(e) => setHeightCm(Number(e.target.value))}
+                    className="w-full accent-orange-500 cursor-pointer h-1.5 mt-1"
                   />
                 </div>
               </div>
