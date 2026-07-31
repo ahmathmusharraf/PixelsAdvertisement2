@@ -253,6 +253,14 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: 'team-4',
+    name: 'Saroj Khan',
+    role: 'Production Manager',
+    department: 'Production Team',
+    bio: 'Supervising CNC laser cutting, indoor & outdoor LED screen assembly, channel letter fabrication, and quality assurance.',
+    photo: '/Saroj.jpg'
+  },  
+  {
+    id: 'team-5',
     name: 'Roney Thomas',
     role: 'Design Manager',
     department: 'Creative Team',
@@ -260,7 +268,7 @@ export const teamMembers: TeamMember[] = [
     photo: '/Roney.jpg'
   },
   {
-    id: 'team-5',
+    id: 'team-6',
     name: 'Tony Thomas',
     role: 'Designer',
     department: 'Creative Team',
@@ -268,20 +276,12 @@ export const teamMembers: TeamMember[] = [
     photo: '/Tony.jpg'
   },
   {
-    id: 'team-6',
+    id: 'team-7',
     name: 'Susan Roney Thomas',
     role: 'Junior Accountant',
     department: 'Finance',
     bio: 'Overseeing corporate accounts, client invoicing, vendor statements, financial bookkeeping, and audit preparation.',
     photo: '/Susan.jpg'
-  },
-  {
-    id: 'team-7',
-    name: 'Saroj Khan',
-    role: 'Production Manager',
-    department: 'Production Team',
-    bio: 'Supervising CNC laser cutting, indoor & outdoor LED screen assembly, channel letter fabrication, and quality assurance.',
-    photo: '/Saroj.jpg'
   }
 ];
 
