@@ -13,11 +13,12 @@ export const companyDetails = {
   name: 'Pixels Advertisement',
   arabicName: 'بيكسلز للدعاية والاعلان',
   tagline: 'UAE’s Leading Outdoor & Indoor LED Screen Specialists & 3D Signage Experts',
-  subHeading: 'Specializing in High-Brightness Outdoor & Indoor LED Display Screens, 3D Illuminated Signboards, Sticker Branding, Neon Signs, and Heavy Machinery Fabrication in Ajman, UAE.',
+  subHeading: 'Specializing in High-Brightness Outdoor & Indoor LED Display Screens, 3D Illuminated Signboards, Sticker Branding, Neon Signs, and Commercial Printing in Ajman, UAE.',
   address: 'China Mall, Gate No. 6, Opposite Ajman, Al Jerf Industrial 1, Ajman, UAE',
   phone: '+971 52 139 9918',
   phoneClean: '+971521399918',
-  email: 'info@pixelsadvertisement.ae',
+  email: 'info@pixelsadv.ae',
+  website: 'https://pixelsadv.ae',
   whatsapp: '+971521399918',
   workingHours: 'Monday–Saturday: 8:00 AM – 8:30 PM (Sunday Closed)',
   googleMapsUrl: 'https://maps.app.goo.gl/ENLYyavqa8gwa69e9',
@@ -40,11 +41,11 @@ export const servicesData: ServiceItem[] = [
     id: 'led-screens',
     title: 'Outdoor & Indoor LED Screens',
     category: 'LED Screens',
-    shortDesc: 'High-brightness, ultra-definition outdoor & indoor LED screens, video walls and digital displays.',
-    fullDesc: 'Custom fabricated P1.8 to P10 LED display screens for indoor shopping malls, retail venues, and outdoor building facades across the UAE. Engineered for maximum brightness, high refresh rate, and heat endurance.',
+    shortDesc: 'High-brightness, ultra-definition outdoor (P2.5, P6, P10) & indoor (P1.5, P1.8, P2.5, P3) LED screens & video walls.',
+    fullDesc: 'Custom fabricated Outdoor LED Display Screens (P2.5, P6, P10) and Indoor LED Screens (P1.5, P1.8, P2.5, P3) for shopping malls, control rooms, retail venues, and outdoor building facades across the UAE. Engineered for high refresh rates, vivid contrast, and 50°C+ heat endurance.',
     iconName: 'Tv',
     image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop',
-    items: ['Outdoor LED Screens', 'Indoor LED Screens', 'LED Video Walls', 'Digital Display Panels', 'Transparent LED Displays'],
+    items: ['Outdoor LED (P2.5, P6, P10)', 'Indoor LED (P1.5, P1.8, P2.5, P3)', 'LED Video Walls', 'Digital Display Panels', 'Transparent LED Displays'],
     turnaroundTime: '5-7 Days'
   },
   {
@@ -79,17 +80,6 @@ export const servicesData: ServiceItem[] = [
     image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=1200&auto=format&fit=crop',
     items: ['Custom LED Flex Neon', 'Boutique Neon Logos', 'Acrylic Neon Art', 'Open / Closed Neon Signs', 'RGB Multi-Color Neon'],
     turnaroundTime: '2-3 Days'
-  },
-  {
-    id: 'signage-machinery',
-    title: 'Signage Machinery',
-    category: 'Signage Machinery',
-    shortDesc: 'State-of-the-art CNC laser cutting, acrylic bending & industrial fabrication.',
-    fullDesc: 'In-house manufacturing facility equipped with heavy-duty CNC fiber laser cutters, channel letter automatic bending machines, UV flatbed printers, and sheet metal routers.',
-    iconName: 'Layers',
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop',
-    items: ['Signage Machinery Works', 'CNC Fiber Laser Cutting', 'Channel Letter Bending', 'UV Flatbed Printing', 'ACP Sheet Routing'],
-    turnaroundTime: '1-3 Days'
   },
   {
     id: 'traffic-signs',
@@ -396,7 +386,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     year: '2022',
     title: 'Launched LED Display Division',
-    description: 'Introduced high-definition P2 to P10 outdoor LED screens, video walls, and custom digital signage solutions.'
+    description: 'Introduced high-definition Outdoor (P2.5, P6, P10) & Indoor (P1.5, P1.8, P2.5, P3) LED screens, video walls, and custom digital signage solutions.'
   },
   {
     year: '2024',
@@ -435,10 +425,10 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 'blog-3',
-    title: 'Indoor vs. Outdoor LED Video Walls: Selecting Pixel Pitch (P1.8 to P4)',
+    title: 'Indoor vs. Outdoor LED Video Walls: Choosing Pixel Pitch (Outdoor P2.5, P6, P10 | Indoor P1.5, P1.8, P2.5, P3)',
     category: 'LED Tech',
-    excerpt: 'A complete buyer guide on resolution, brightness nits, viewing distance, and weatherproofing.',
-    content: 'Selecting the right LED video screen pitch depends on viewing distance. For indoor retail displays viewed within 2 meters, P1.8 or P2.5 delivers crystal clarity. For outdoor billboards viewed from 10+ meters, P3.91 or P5 offers maximum brightness.',
+    excerpt: 'Complete guide on selecting Outdoor (P2.5, P6, P10) & Indoor (P1.5, P1.8, P2.5, P3) pitch sizes based on viewing distance and environment.',
+    content: 'Selecting the right LED video screen pitch depends on viewing distance and installation environment. For indoor retail displays, boardrooms, and control rooms, indoor pitches P1.5, P1.8, P2.5, and P3 deliver crisp detail. For outdoor building facades, roadside billboards, and stadium screens, outdoor pitches P2.5, P6, and P10 deliver high brightness and weather resistance.',
     author: 'Faisal Khan',
     date: 'May 10, 2026',
     readTime: '6 min read',
