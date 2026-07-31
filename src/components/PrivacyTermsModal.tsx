@@ -155,7 +155,7 @@ export const PrivacyTermsModal: React.FC<PrivacyTermsModalProps> = ({
                 <div className="p-3.5 rounded-xl bg-orange-500/5 border border-orange-500/20 flex items-start gap-3">
                   <Building2 className="w-5 h-5 text-orange-400 shrink-0 mt-0.5" />
                   <p className="text-xs text-neutral-300">
-                    By engaging with <strong>{companyDetails.name}</strong> for LED screen supply, 3D signage fabrication, sticker printing, or machinery services in Ajman, UAE, you agree to the following standard commercial terms.
+                    By engaging with <strong>{companyDetails.name}</strong> for LED screen supply, 3D signage fabrication, sticker printing, or commercial printing services in Ajman, UAE, you agree to the following standard commercial terms.
                   </p>
                 </div>
 
