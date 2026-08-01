@@ -277,7 +277,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: 'team-7',
-    name: 'Susan Roney Thomas',
+    name: 'Susan Rony Thomas',
     role: 'Junior Accountant',
     department: 'Finance',
     bio: 'Overseeing corporate accounts, client invoicing, vendor statements, financial bookkeeping, and audit preparation.',
