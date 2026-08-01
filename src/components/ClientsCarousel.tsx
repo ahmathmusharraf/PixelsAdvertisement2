@@ -17,15 +17,15 @@ export const ClientsCarousel: React.FC = () => {
           {clientsData.concat(clientsData).map((client, idx) => (
             <div
               key={`${client.id}-${idx}`}
-              className="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-neutral-900/80 border border-neutral-800 hover:border-orange-500/40 transition shrink-0 group cursor-default"
+              className="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-neutral-900/80 border border-neutral-800 hover:border-orange-500/40 transition shrink-0 group cursor-default whitespace-nowrap"
             >
-              <div className="w-8 h-8 rounded-lg bg-orange-500/10 text-orange-400 flex items-center justify-center font-bold">
+              <div className="w-8 h-8 rounded-lg bg-orange-500/10 text-orange-400 flex items-center justify-center font-bold shrink-0">
                 <Building2 className="w-4 h-4" />
               </div>
-              <span className="text-sm font-bold text-neutral-200 group-hover:text-orange-400 transition">
+              <span className="text-sm font-bold text-neutral-200 group-hover:text-orange-400 transition whitespace-nowrap">
                 {client.name}
               </span>
-              <span className="text-[10px] text-neutral-400 bg-neutral-800 px-2 py-0.5 rounded-md font-mono">
+              <span className="text-[10px] text-neutral-400 bg-neutral-800 px-2 py-0.5 rounded-md font-mono shrink-0">
                 {client.category}
               </span>
             </div>
