@@ -355,13 +355,17 @@ export const testimonialsData: Testimonial[] = [
 ];
 
 export const clientsData: ClientLogo[] = [
-  { id: 'c1', name: 'ADCB', category: 'Banking' },
-  { id: 'c2', name: 'Emirates', category: 'Aviation' },
-  { id: 'c3', name: 'Sharjah Police', category: 'Government' },
-  { id: 'c4', name: 'Nesto Hypermarket', category: 'Retail' },
-  { id: 'c5', name: 'LuLu Hypermarket', category: 'Retail' },
-  { id: 'c6', name: 'Ajman Bank', category: 'Banking' },
-  { id: 'c7', name: 'Ramada Hotel', category: 'Hospitality' }
+  { id: 'c1', name: 'China Harbour Engineering Company', category: 'Infrastructure' },
+  { id: 'c2', name: 'Empire Real Estate Developments LLC - Dubai', category: 'Real Estate' },
+  { id: 'c3', name: 'Eureka Restaurant & Cafe LLC', category: 'Hospitality' },
+  { id: 'c4', name: 'Mohre', category: 'Government' },
+  { id: 'c5', name: 'ADCB', category: 'Banking' },
+  { id: 'c6', name: 'Emirates', category: 'Aviation' },
+  { id: 'c7', name: 'Sharjah Police', category: 'Government' },
+  { id: 'c8', name: 'Nesto Hypermarket', category: 'Retail' },
+  { id: 'c9', name: 'LuLu Hypermarket', category: 'Retail' },
+  { id: 'c10', name: 'Ajman Bank', category: 'Banking' },
+  { id: 'c11', name: 'Ramada Hotel', category: 'Hospitality' }
 ];
 
 export const timelineData: TimelineMilestone[] = [
