@@ -122,7 +122,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal, onOpenTrackerModal
               {/* Main Image Banner representing Pixels storefront & vehicle fleet */}
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-neutral-950">
                 <img
-                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop"
+                  src="/shop.jpg"
                   alt="Outdoor & Indoor LED Display Screens Pixels Advertisement"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   referrerPolicy="no-referrer"
