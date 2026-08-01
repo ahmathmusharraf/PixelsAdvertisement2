@@ -226,7 +226,7 @@ export const portfolioProjects: PortfolioProject[] = [
 export const teamMembers: TeamMember[] = [
   {
     id: 'team-1',
-    name: 'Danyal (Pwng Liu)',
+    name: 'Danyal',
     role: 'CEO & Founder',
     department: 'Leadership',
     bio: 'Visionary founder leading Pixels Advertisement to become the premier outdoor & indoor LED display screen and 3D signage specialist in the UAE.',
